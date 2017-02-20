@@ -1,6 +1,6 @@
 node {
   stage("Build") {
-    git url:"git@github.com:org2jen/test2.git", branch:${BRANCH_NAME}
+    git branch: "${BRANCH_NAME}", credentialsId: 'ssh github', url: 'git@github.com:org2jen/test2.git'
     sh "cat README.md"
   
   }
